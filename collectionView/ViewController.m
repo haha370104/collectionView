@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     [self initCollectionView];
-    [self initCellArray:4];
+    [self initCellArray:6];
 }
 
 #pragma mark - datasource -

@@ -38,7 +38,7 @@
         itemFrame.origin.y = self.sectionInset.top;
         itemFrame.origin.x = index * (maxEdgeInsetX + self.itemWidth) + maxEdgeInsetX;
         attribute.frame = itemFrame;
-    } else if (index < 4 * self.itemCountEachEdge - 8) {                //空心行
+    } else if (index < self.itemCount - self.itemCountEachEdge) {                //空心行
         NSInteger rowNumber = (index - self.itemCountEachEdge) / 2 + 1; //从第一行开始计数
         NSInteger colomnNumber = (index - self.itemCountEachEdge) % 2;
         CGRect itemFrame = CGRectMake(0, 0, self.itemWidth, self.itemHeight);
