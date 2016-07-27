@@ -21,22 +21,10 @@
     return self;
 }
 
-- (void)setProperty:(UIColor *)color cellText:(NSString *)string
+- (void)setPropertyWithColor:(UIColor *)color cellText:(NSString *)string
 {
     self.cellColor = color;
     self.cellString = string;
-    self.backgroundColor = color;
-    if ([self.backgroundColor isEqual:[UIColor clearColor]]) {
-        self.moveFlag = NO;
-    } else {
-        self.moveFlag = YES;
-    }
 }
-
-- (Boolean)getMoveFlag
-{
-    return self.moveFlag;
-}
-
 
 @end

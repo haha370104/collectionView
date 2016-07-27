@@ -18,14 +18,32 @@
 
 @implementation BXCollectionCell
 
+#pragma mark - init -
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.cellLabel = [[UILabel alloc] initWithFrame:self.bounds];
         [self addSubview:self.cellLabel];
     }
     return self;
+}
+
+#pragma mark - lifecycle -
+
+- (void)prepareForReuse
+{
+    self.cellLabel.text = @"";
+}
+
+#pragma mark - getter && setter -
+
+- (UILabel *)cellLabel
+{
+    if(!_cellLabel){
+        _cellLabel = [[UILabel alloc] initWithFrame:self.bounds];
+    }
+    return _cellLabel;
 }
 
 @end

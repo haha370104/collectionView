@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CellModel : UICollectionViewCell
+@interface CellModel : NSObject
 
 @property (nonatomic) UIColor *cellColor;
 @property (nonatomic) NSString *cellString;
-@property (nonatomic) Boolean moveFlag;
 
 - (id)initWithColorAndText:(UIColor *)cellColor cellText:(NSString *)cellString;
 
